@@ -19,13 +19,13 @@ import boto3
 ec2 = boto3.resource('ec2')
 
 # インスタンス作成
-ami_id = 'ami-0c3fd0f5d33134a76'
-subnet_id = '<YOUR SUBNET ID>'
+AMI_ID = 'ami-0c3fd0f5d33134a76'
+SUBNET_ID = 'subnet-0a5e97de59014af45'
 
-instances = ec2.create_instances(ImageId=ami_id,
+instances = ec2.create_instances(ImageId=AMI_ID,
                                  MaxCount=1, MinCount=1,
                                  InstanceType='t2.micro',
-                                 SubnetId=subnet_id)
+                                 SubnetId=SUBNET_ID)
 print(instances)
 instance = instances[0]
 
