@@ -20,7 +20,7 @@ ec2 = boto3.resource('ec2')
 
 # インスタンス作成
 AMI_ID = 'ami-0c3fd0f5d33134a76'
-SUBNET_ID = 'subnet-0a5e97de59014af45'
+SUBNET_ID = 'subnet-xxx'  # サブネットIDを指定
 
 instances = ec2.create_instances(ImageId=AMI_ID,
                                  MaxCount=1, MinCount=1,
